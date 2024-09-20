@@ -37,11 +37,31 @@
   > - 전수조사 공격(Brute-Force Attack)
   > - 통계적인 공격(Statistical Attack)
   > - 패턴 공격(Pattern Attack)
+  <br/>
 
 - 알고있는 평문 공격(Known-Plaintext Attack) <br/>
 <img width="544" alt="image" src="https://github.com/user-attachments/assets/3f9f7658-427a-4c30-89f3-2bdfddf4bd8b"><br/>
 
-  > - "공격자가 암호문을 알고있는 경우"
+  > "공격자가 암호문을 알고있는 경우."
+ <br/>
+ 
+- 선택 평문 공격(Chosen-Plaintext Attack) <br/>
+<img width="580" alt="image" src="https://github.com/user-attachments/assets/de1611db-26d1-4499-a16d-3f8ea643695c"><br/>
+
+  > "공격자가 고른 plaintext의 ciphertext를 얻어볼 수 있는 경우." <br/>
+  > - 즉, 공격자가 평문을 골라서 암호화할 수 있으며, 예를 들어, 공격자가 "HELLO" 라는 평문을 선택해서 암호화하면, 암호문 "XJCVZ"를 받는 식이다.
+<br/>
+
+- 선택 암호문 공격(Chosen-Ciphertext Attack) <br/>
+<img width="579" alt="image" src="https://github.com/user-attachments/assets/a2abd3a0-b2b4-4633-9bd4-ea817296065e"> <br/>
+
+  > "공격자가 특정 ciphertext를 선택하여 plaintext로 복호화할 수 있는 경우." <br/>
+  > - 즉, 공격자가 암호문을 골라서 복호화할 수 있으며, 예를 들어, 공격자가 "XJCVZ" 라는 암호문을 선택해서 복호화하면, 평문 "HELLO"를 받는 식이다. <br/>
+  > - _**선택 평문 공격 보다 강력하다.**_
+
+
+
+  
 
 
 
