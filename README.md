@@ -21,4 +21,32 @@
 ><img width="558" alt="image" src="https://github.com/user-attachments/assets/47aea8cb-ca18-4236-aac5-011478f4a949">
 
 ## Kerckhoff's Principle
-- Kerckhoff의 원리에 따라, 공격자 Eve는 항상 암호/복호 알고리즘은 알고 있다고 가정한다. 
+- Kerckhoff의 원리에 따라, 공격자 Eve는 항상 암호/복호 알고리즘은 알고 있다고 가정한다.
+- 암호의 안전성은 키의 안전성에만 바탕을 둔다.
+  > 즉, 키를 알아내기 매우 어려워서 암호/복호 알고리즘을 비공개로 할 필요가 없어야 한다.
+
+<br/>
+
+## Cryptanalysis
+<img width="594" alt="image" src="https://github.com/user-attachments/assets/38ae2fb8-57d0-4c08-b8b0-ba89c5b0673f"> <br/>
+> 암호분석공격
+
+- 암호문 단독 공격(Ciphertext-Only Attack) <br/>
+  <img width="525" alt="image" src="https://github.com/user-attachments/assets/8169f821-8d93-48f3-b6ac-84a19cebacfd"><br/>
+
+  > - 전수조사 공격(Brute-Force Attack)
+  > - 통계적인 공격(Statistical Attack)
+  > - 패턴 공격(Pattern Attack)
+
+- 알고있는 평문 공격(Known-Plaintext Attack) <br/>
+<img width="544" alt="image" src="https://github.com/user-attachments/assets/3f9f7658-427a-4c30-89f3-2bdfddf4bd8b"><br/>
+
+  > - "공격자가 암호문을 알고있는 경우"
+
+
+
+
+
+
+
+
