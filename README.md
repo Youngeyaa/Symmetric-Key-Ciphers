@@ -17,4 +17,8 @@
 <img width="577" alt="image" src="https://github.com/user-attachments/assets/9159a218-5762-43ec-9329-d8f1d4cbfb9c">
 
 > 즉, Bop에 의해 생성된 평문 (복호화 결과) P1이 Alice에 의해 작성된 원래의 평문 P와 같음을 증명할 수 있다. 
-><img width="437" alt="image" src="https://github.com/user-attachments/assets/8c6a4d6b-91b8-47b9-b440-1c8b8e5df79f">
+><img width="558" alt="image" src="https://github.com/user-attachments/assets/8c6a4d6b-91b8-47b9-b440-1c8b8e5df79f">
+><img width="558" alt="image" src="https://github.com/user-attachments/assets/47aea8cb-ca18-4236-aac5-011478f4a949">
+
+## Kerckhoff's Principle
+- Kerckhoff의 원리에 따라, 공격자 Eve는 항상 암호/복호 알고리즘은 알고 있다고 가정한다. 
