@@ -59,11 +59,28 @@
   > - 즉, 공격자가 암호문을 골라서 복호화할 수 있으며, 예를 들어, 공격자가 "XJCVZ" 라는 암호문을 선택해서 복호화하면, 평문 "HELLO"를 받는 식이다. <br/>
   > - _**선택 평문 공격 보다 강력하다.**_
 
+------------------------------------------
+## Transposition Ciphers (전치암호) 
+
+- 전치암호는 한 기호를 다른 기호로 대체시키지 않고, 대신에 그 기호의 위치를 바꾼다.
+  >  즉, 전치암호는 기호를 재정렬시킨다.
+
+#1 Keyless Transposition Ciphers
+> 과거에 사용된 간단한 전치암호는 키가 없다.
+
+- rail fence ciphers
+> 평문은 지그재그패턴으로 두 열에 배열, 암호문은 행 순서의 패턴으로 읽혀져 생성된다.
+  <img width="909" alt="스크린샷 2024-09-21 오후 12 41 44" src="https://github.com/user-attachments/assets/a8621fea-c7f1-4137-b263-61dcf4178619">
 
 
-  
+> - "Meet me at the park" -> "MEMATEAKETETHPR"
 
+- decide the table's the number of columns.
+> table의 column 수를 정해두고, 암호화하는 방법. 평문을 Column 수로 계속 나누어 table에 한 row씩 쓴다. 이후, 작성된 table을 column 순서로 읽으면 암호문을 완성할 수 있다.
 
+<img width="530" alt="스크린샷 2024-09-21 오후 1 27 20" src="https://github.com/user-attachments/assets/46f7cb50-1d56-4dcf-afb1-0ccd46ddd6a4">
+
+> - "Meet me at the park" -> "MMTAEEHREAEKTTP" 복호화하는 과정은 Table을 Column순으로 채우면 된다. Column의 수를 미리 정해두었으므로, Ciphertext의 전체길이를 Column 수로 나누어 그 개수만큼 하나의 Column에 쓰고, 작성된 Table을 Row 순서로 읽으면 Plaintext를 완성할 수 있다.
 
 
 
