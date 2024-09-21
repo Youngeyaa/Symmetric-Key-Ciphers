@@ -88,7 +88,7 @@
 > - _앞서 Keyless Transposition Cipher는 보통 plaintext를 한 row씩 쓰고 한 column씩 읽듯 쓰는 방법과 읽는 방법을 변경해서 ciphertext를 완성시켰다. Keyed Transposition Cipher에서는 이와 달리 Plaintext를 일정한 조각으로 나누어 나누어진 조각을 특정한 규칙에 맞게 글자간 순서를 변경하는 것으로 수행된다. 이때 나눠진 조각을 Block 이라하며, 결국 Plaintext를 Block 단위로 나누어 Block에서 Permutation을 수행하게 되는 것이다.(평문을 나눈 뒤 각각의 블록에 독립적으로 키를 사용하여 문자를 치환하는 것)_
 
 - "Enemy Attacks Tonight" 이라는 문장을 암호화 해보자.
-  > - block 크기는 5이고, block의 permutation key는 _**'31452'**_ 라고 가정한다.
+  > - block 크기는 5이고, block의 permutation key(encryption key)는 _**'31452'**_ 라고 가정한다.
   > - block 5개씩 나눴을 때, 한 글자가 부족하므로 plaintext의 마지막에 임의의 알파벳 "z"를 추가한다.
   
 <img width="936" alt="스크린샷 2024-09-21 오후 1 47 05" src="https://github.com/user-attachments/assets/2f3a0edb-c730-47ca-a0b2-a96c510cdf6e"><br/>
@@ -100,11 +100,27 @@
 
 <img width="941" alt="스크린샷 2024-09-21 오후 1 55 05" src="https://github.com/user-attachments/assets/8f3a8c57-a8dd-4b6c-ab0e-9e87e80e3b74">
 
-> 복호화를 위한 Key의 생성은 위의 표에서 첫 번째 row가 12345 가 되도록 수정한다. Decrypt Key 그림을 통해 설명하면
+> Decrypt를 위한 Key의 생성은 위의 표에서 첫 번째 row가 12345 가 되도록 수정한다. Decrypt Key 그림을 통해 설명하면
 
 <img width="223" alt="스크린샷 2024-09-21 오후 2 04 32" src="https://github.com/user-attachments/assets/4ef79eac-10c8-4daa-ae9e-08d1719ea402">
 
-> 2번째 글자가 1번째 글자가 되고, 5번째 글자가 2번째 글자가 되는 방식인 것이다. 이 때 사용한 Decrypt Key는 _**'25134'**_ 가 된다. 
+> 2번째 글자가 1번째 글자가 되고, 5번째 글자가 2번째 글자가 되는 방식인 것이다. 이 때 사용한 Decryption Key는 _**'25134'**_ 가 된다. 
+
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/5bf5e339-e848-4115-97e6-4b8cf23eaeb8">
+
+--------------------------
+
+## Combined Transposition Cipher
+> 앞선 두 방식을 합쳐서 만들어진 Cipher. (Keyless & Keyed Transposition Cipher)
+> - Keyless Transposition Cipher의 Table의 Column을 결정해 Table을 생성한 뒤, Table Column간에 Keyed Transposition Cipher의 Key를 통해서 Permutate 한다. 이후 완성된 Table을 Column by Column 순서로 읽어 Ciphertext를 완성한다.
+
+<img width="542" alt="image" src="https://github.com/user-attachments/assets/1e1d735a-a057-43fa-9d21-5e488ab055bf">
+
+ <img width="222" alt="스크린샷 2024-09-21 오후 2 51 01" src="https://github.com/user-attachments/assets/ab8e5e6b-8ff6-4f60-88f9-54e2f4cc153d">
+
+> 예제로 "ENEMY ATTACKS TONIGHT"를 Encrypt 해보자. 사용되는 key는 마찬가지로 _**'31452'**_ 이며, Block Size는 5이다. Block Size가 5이기 때문에 자동적으로 Column의 수도 5가 된다.
+> 우선 plaintext를 column이 5인 table에 채워넣는다. 한글자가 부족하므로 임의의 문자 x(or z)를 추가한다.
+> 완성된 기존의 table에서 _**'31452'**_ key를 이용해 column간 순서를 permutate 한다. 이후에 완성된 Table을 Column by Column 순서로 읽으면 된다. 즉, ciphertext는 "ETTAEAKIMAOTYCNXNTSG"가 된다. Decrypt의 경우에는 Column by Column 순서로 Table에 Ciphertext를 채워넣고, Decrption Key _**'25134'**_ 를 이용해 Table의 Column을 Permute한다. 완성된 Table을 Row by Row 로 읽으면 Plaintext를 완성할 수 있다.
 
 
 
