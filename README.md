@@ -83,6 +83,35 @@
 > - "Meet me at the park" -> "MMTAEEHREAEKTTP" 복호화하는 과정은 Table을 Column순으로 채우면 된다. Column의 수를 미리 정해두었으므로, Ciphertext의 전체길이를 Column 수로 나누어 그 개수만큼 하나의 Column에 쓰고, 작성된 Table을 Row 순서로 읽으면 Plaintext를 완성할 수 있다.
 
 
+#2 Keyed Transposition Ciphers
+> 키가 있는 전치암호
+> - _앞서 Keyless Transposition Cipher는 보통 plaintext를 한 row씩 쓰고 한 column씩 읽듯 쓰는 방법과 읽는 방법을 변경해서 ciphertext를 완성시켰다. Keyed Transposition Cipher에서는 이와 달리 Plaintext를 일정한 조각으로 나누어 나누어진 조각을 특정한 규칙에 맞게 글자간 순서를 변경하는 것으로 수행된다. 이때 나눠진 조각을 Block 이라하며, 결국 Plaintext를 Block 단위로 나누어 Block에서 Permutation을 수행하게 되는 것이다.(평문을 나눈 뒤 각각의 블록에 독립적으로 키를 사용하여 문자를 치환하는 것)_
+
+- "Enemy Attacks Tonight" 이라는 문장을 암호화 해보자.
+  > - block 크기는 5이고, block의 permutation key는 '31452'라고 가정한다.
+  > - block 5개씩 나눴을 때, 한 글자가 부족하므로 plaintext의 마지막에 임의의 알파벳 "z"를 추가한다.
+  
+<img width="936" alt="스크린샷 2024-09-21 오후 1 47 05" src="https://github.com/user-attachments/assets/2f3a0edb-c730-47ca-a0b2-a96c510cdf6e"><br/>
+
+
+<img width="225" alt="스크린샷 2024-09-21 오후 1 51 00" src="https://github.com/user-attachments/assets/64a4a00e-623a-4bc2-89e3-e8874d219cb4">
+
+> 이를 해석해보면, 각 Block에서 3번째 글자를 가장먼저 쓰고, 1번째 글자를 두번째로, 4번째 글자를 세번째로 쓰면서 암호화를 진행하라는 말이다. 즉, "enemy" 라는 단어는 "EEMYN"으로 암호화될 것이다. 이 방식으로 전체 문장에 대한 암호화를 진행한 결과는 다음과 같다.
+
+<img width="941" alt="스크린샷 2024-09-21 오후 1 55 05" src="https://github.com/user-attachments/assets/8f3a8c57-a8dd-4b6c-ab0e-9e87e80e3b74">
+
+> 복호화를 위한 Key의 생성은 위의 표에서 첫 번째 row가 12345 가 되도록 수정한다. Decrypt Key 그림을 통해 설명하면
+
+<img width="223" alt="스크린샷 2024-09-21 오후 2 04 32" src="https://github.com/user-attachments/assets/4ef79eac-10c8-4daa-ae9e-08d1719ea402">
+
+> 2번째 글자가 1번째 글자가 되고, 5번째 글자가 2번째 글자가 되는 방식인 것이다. 이 때 사용한 Decrypt Key는 '25134' 가 된다. 
+
+
+
+
+
+
+
 
 
 
