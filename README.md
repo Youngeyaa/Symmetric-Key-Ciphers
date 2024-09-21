@@ -114,13 +114,16 @@
 > 앞선 두 방식을 합쳐서 만들어진 Cipher. (Keyless & Keyed Transposition Cipher)
 > - Keyless Transposition Cipher의 Table의 Column을 결정해 Table을 생성한 뒤, Table Column간에 Keyed Transposition Cipher의 Key를 통해서 Permutate 한다. 이후 완성된 Table을 Column by Column 순서로 읽어 Ciphertext를 완성한다.
 
-<img width="542" alt="image" src="https://github.com/user-attachments/assets/1e1d735a-a057-43fa-9d21-5e488ab055bf">
+<img width="542" alt="image" src="https://github.com/user-attachments/assets/1e1d735a-a057-43fa-9d21-5e488ab055bf"><br/>
 
  <img width="222" alt="스크린샷 2024-09-21 오후 2 51 01" src="https://github.com/user-attachments/assets/ab8e5e6b-8ff6-4f60-88f9-54e2f4cc153d">
 
 > 예제로 "ENEMY ATTACKS TONIGHT"를 Encrypt 해보자. 사용되는 key는 마찬가지로 _**'31452'**_ 이며, Block Size는 5이다. Block Size가 5이기 때문에 자동적으로 Column의 수도 5가 된다.
 > 우선 plaintext를 column이 5인 table에 채워넣는다. 한글자가 부족하므로 임의의 문자 x(or z)를 추가한다.
 > 완성된 기존의 table에서 _**'31452'**_ key를 이용해 column간 순서를 permutate 한다. 이후에 완성된 Table을 Column by Column 순서로 읽으면 된다. 즉, ciphertext는 "ETTAEAKIMAOTYCNXNTSG"가 된다. Decrypt의 경우에는 Column by Column 순서로 Table에 Ciphertext를 채워넣고, Decrption Key _**'25134'**_ 를 이용해 Table의 Column을 Permute한다. 완성된 Table을 Row by Row 로 읽으면 Plaintext를 완성할 수 있다.
+
+
+<img width="783" alt="image" src="https://github.com/user-attachments/assets/6a305ac5-ee24-492e-9619-6bf450808a7c">
 
 
 
