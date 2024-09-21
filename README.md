@@ -88,7 +88,7 @@
 > - _앞서 Keyless Transposition Cipher는 보통 plaintext를 한 row씩 쓰고 한 column씩 읽듯 쓰는 방법과 읽는 방법을 변경해서 ciphertext를 완성시켰다. Keyed Transposition Cipher에서는 이와 달리 Plaintext를 일정한 조각으로 나누어 나누어진 조각을 특정한 규칙에 맞게 글자간 순서를 변경하는 것으로 수행된다. 이때 나눠진 조각을 Block 이라하며, 결국 Plaintext를 Block 단위로 나누어 Block에서 Permutation을 수행하게 되는 것이다.(평문을 나눈 뒤 각각의 블록에 독립적으로 키를 사용하여 문자를 치환하는 것)_
 
 - "Enemy Attacks Tonight" 이라는 문장을 암호화 해보자.
-  > - block 크기는 5이고, block의 permutation key는 _**'31452'**_라고 가정한다.
+  > - block 크기는 5이고, block의 permutation key는 _**'31452'**_ 라고 가정한다.
   > - block 5개씩 나눴을 때, 한 글자가 부족하므로 plaintext의 마지막에 임의의 알파벳 "z"를 추가한다.
   
 <img width="936" alt="스크린샷 2024-09-21 오후 1 47 05" src="https://github.com/user-attachments/assets/2f3a0edb-c730-47ca-a0b2-a96c510cdf6e"><br/>
