@@ -1,4 +1,5 @@
 # Symmetric-Key-Ciphers / 대칭키 암호화 (InfSec) 
+-------------
 
 
  <img width="617" alt="image" src="https://github.com/user-attachments/assets/2cd16f60-03f2-4032-9a44-b65c4ba5f4ee">
@@ -125,7 +126,7 @@
 
 <img width="783" alt="image" src="https://github.com/user-attachments/assets/6a305ac5-ee24-492e-9619-6bf450808a7c">
 
-
+> <참고 https://ieatt.tistory.com/27 > 
 
 
 
